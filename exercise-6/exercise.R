@@ -1,51 +1,47 @@
-# Exercise 6: Popular Baby Names Over Time
+# Exercise 6: Husky Football 2015 Season
+# Read in the Husky Football 2015 game data into a variable called `husky.games.2015`
+husky.games.2015 <- read.csv('data/huskies_2015.csv')
 
-# Read in the female baby names csv file into a variable called `female.names`
-female.names <- read.csv('data/female_names.csv')
+# Create a vector of the teams that the Huskies played against during that season
+# Call this vector `not.huskies`. You'll need to convert this column to a vector
+not.huskies <- as.vector(husky.games.2015$opponent)
 
-# Create a vector `year` as the year column of the dataset
-year <- female.names$year
+# Create a vector of the their final scores for the games
+# Call this variable `husky.scores`
+husky.scores <- husky.games.2015$uw.score
 
-# Create a vector `name` as the name column of the datset
-# As in the last exercise, you'll need to convert this column to a vector
-name <- as.vector(female.names$name)
+# Create 2 variables called `rushing.yards` and `passing.yards` to represent the yards the Huskies rushed and passed
+rushing.yards <- husky.games.2015$rushing.yards
+passing.yards <- husky.games.2015$passing.yards
 
-# Create a vector `prop` as the proportion column of the dataset
-prop <- female.names$prop
+# Create a variabled called `combined.yards` that is the total yardage of the Huskies for each game
+combined.yards <- passing.yards + rushing.yards
 
-# Create a vector `names.2013` as your name vector where your year vector is 2013
-names.2013 <- name[year == 2013]
+# What is the score of the game where the Huskies had the most combined yards?
+score.with.most.yards <- husky.scores[combined.yards == max(combined.yards)]
 
-# Create a vector `prop.2013` as the your prop vector where your year vecctor is 2013
-proportion.2013 <- prop[year==2013]
+# Write a function `MostYardsScore` that takes in a dataframe parameter `games` and returns a descriptive sentence
+# about the game that was played that had the most yards scored in it.
+# Take note of the steps from above including the opposing team, score, and date the game was played
+MostYardsScore <- function(games) {
 
-# What was the most popular female name in 2013?
-most.pop <- names.2013[proportion.2013 == max(proportion.2013)]
+  dates <- as.vector(games$date)
+  scores <- games$uw.score
+  opponents <- as.vector(games$opponent)
 
-# Write a funciton `most.popular` that takes in a value `my.year`, and returns
-# a sentence stating the most popular name in that year. Note how you had to make intermediary variables above.
-MostPopular <- function(my.year) {
-  year.tmp <- year[year == my.year]
-  names.tmp <- name[year == my.year]
-  prop.tmp <- prop[year==my.year]
-  most.pop <- names.tmp[prop.tmp == max(prop.tmp[year.tmp == my.year])]
-  return(paste('The most popular baby name in', my.year, 'was', most.pop))
+  rushing.yards <- games$rushing.yards
+  passing.yards <- games$passing.yards
+  combined.yards <- passing.yards + rushing.yards
+
+  most.yards <- max(combined.yards)
+  opponent <- opponents[combined.yards == most.yards]
+  date <- dates[combined.yards == most.yards]
+  highest.score <- scores[combined.yards == most.yards]
+
+  return(paste("The game that the Huskies had the most yards was against", opponent, "on", date, "where they scored", highest.score, "points!"))
 }
 
-# What was the most popular female name in 1994?
-most.pop.1994 <- MostPopular(1994)
-
-
-### Bonus ###
-
-# Write a function `how.popular` that takes in a name and a year, and returns
-# a sentence with how popular that name was in that year
-HowPopular <- function(my.name, my.year) {
-  names.tmp <- name[year == my.year]
-  prop.tmp <- prop[year==my.year]
-  popular <- round(prop.tmp[names.tmp == my.name], 4)*100
-  return(paste('The proportion of people named', my.name, 'in', my.year, 'was', popular))
-}
-
-# How popular was the name 'Laura' in 1995
-HowPopular('Laura', 1995)
+# What was the highest yardage game so far this season?
+# Hint: Read in the dataset titled `huskies_2016.csv` and save it as a variable
+husky.games.2016 <- read.csv('data/huskies_2016.csv')
+most.yards.2016 <- MostYardsScore(husky.games.2016)

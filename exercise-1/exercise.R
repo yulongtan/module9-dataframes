@@ -1,28 +1,22 @@
-# Exercise 1: Lists
+# Exercise 1: Creating data frames
 
-# Create a vector of everything you ate for breakfast
-breakfast <- c('toast', 'eggs', 'tea')
+# Create a vector of the number of points the Seahawks have scored in each game this season (google "Seahawks")
+points <- c(12, 3, 37, 27)
 
-# Create a vector of everything you ate for lunch
-lunch <- c('soup', 'pb + j')
+# Create a vector of the number of points the Seahwaks have allowed to be scored against them in each game this season
+points.allowed <- c(10, 9, 18, 17)
 
-# Create a list "meals" that has contains your breakfast and lunch
-meals <- list(breakfast=breakfast, lunch=lunch)
+# Combine your two vectors into a dataframe
+games <- data.frame(points, points.allowed)
 
-# Add a "dinner" index to your "meals" list that has what you plan to eat for dinner
-meals$dinner <- c('curry', 'rice')
+# Create a new column "diff" that is the difference in points
+games$diff <- games$points - games$points.allowed
 
-# Extract your 'dinner' element from your list and save it in a vector called 'dinner'
-dinner <- meals[['dinner']]
+# Create a new column "won" which is TRUE if the Seahawks wom
+games$won <- games$diff > 0
 
-### Bonus ### 
-# Create a list that has the number of items you ate for each meal
-items <- lapply(meals, length)
+# Create a vector of the opponents
+opponents <- c('Dolphins', 'Rams', '49ers', 'Jets')
 
-# Write a function that adds pizza to every meal
-AddPizza <- function(x) {
-  x <- c(x, 'pizza')
-}
-
-# Add pizza to every meal!
-better.meals <- lapply(meals, AddPizza)
+# Assign your dataframe rownames of their opponents
+rownames(games) <- opponents
