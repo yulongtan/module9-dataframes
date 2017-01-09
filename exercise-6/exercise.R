@@ -1,37 +1,28 @@
-# Exercise 6: Popular Baby Names Over Time
-
-# Read in the female baby names csv file into a variable called `female.names`
-
-
-# Create a vector `year` as the year column of the dataset
+# Exercise 6: Husky Football 2015 Season
+# Read in the Husky Football 2015 game data into a variable called `husky.games.2015`
 
 
-# Create a vector `name` as the name column of the datset
-# As in the last exercise, you'll need to convert this column to a vector
+# Create a vector of the teams that the Huskies played against during that season
+# Call this vector `not.huskies`. You'll need to convert this column to a vector
 
 
-# Create a vector `prop` as the proportion column of the dataset
+# Create a vector of the their final scores for the games
+# Call this variable `husky.scores`
 
 
-# Create a vector `names.2013` as your name vector where your year vector is 2013
+# Create 2 variables called `rushing.yards` and `passing.yards` to represent the yards the Huskies rushed and passed
 
 
-# Create a vector `prop.2013` as the your prop vector where your year vecctor is 2013
+# Create a variabled called `combined.yards` that is the total yardage of the Huskies for each game
 
 
-# What was the most popular female name in 2013?
+# What is the score of the game where the Huskies had the most combined yards?
 
 
-# Write a funciton `MostPopular` that takes in a value `my.year`, and returns
-# a sentence stating the most popular name in that year. 
+# Write a function `MostYardsScore` that takes in a dataframe parameter `games` and returns a descriptive sentence
+# about the game that was played that had the most yards scored in it.
+# Take note of the steps from above including the opposing team, score, and date the game was played
 
 
-# What was the most popular female name in 1994?
-
-
-### Bonus ###
-
-# Write a function `HowPopular` that takes in a name and a year, and returns
-# a sentence with how popular that name was in that year
-
-# How popular was the name 'Laura' in 1995
+# What was the highest yardage game so far this season?
+# Hint: Read in the dataset titled `huskies_2016.csv` and save it as a variable

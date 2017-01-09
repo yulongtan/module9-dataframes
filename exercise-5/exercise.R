@@ -1,36 +1,35 @@
 # Exercise 5: Gates Foundation Educational Grants
 
-# Read data into a variable called `grants` using the `read.csv` function
+# Read in the female baby names csv file into a variable called `female.names`
 
 
-# Use the View function to look at your data
+# Create a vector `years` as the year column of the dataset
 
 
-# Create a variable `spending` as the `total_amount` column of the dataset
+# Create a vector `names` as the name column of the datset
 
 
-# Confirm that your `spending` variable is a vector using the `is.vector` function
+# Create a vector `props` as the proportion column of the dataset
 
 
-# Create a variable `org` as the `organization` column of the dataset.
-# Unfortunately, it will not be a vector by default, so you must transform it using the as.vector function
+# Create a vector `names.2013` as your names vector where your years vector is 2013
 
 
-### Now you can ask some more interesting questions about the dataset.  Store your answers in variables ###
-
-# What was the mean grant value?
+# Create a vector `prop.2013` as the your props vector where your years vecctor is 2013
 
 
-# What was the dollar amount of the largest grant?
+# What was the most popular female name in 2013?
 
 
-# What was the dollar amount of the smallest grant?
+# Write a funciton `most.popular` that takes in a value `my.year`, and returns
+# a sentence stating the most popular name in that year. Note how you had to make intermediary variables above.
 
 
-# Which organization received the largest grant?
+# What was the most popular female name in 1994?
 
 
-# Which organization received the smallest grant?
+# Write a function `how.popular` that takes in a name and a year, and returns
+# a sentence with how popular that name was in that year
 
 
-# How many grants were awarded in 2010?
+# How popular was the name 'Laura' in 1995

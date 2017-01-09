@@ -1,26 +1,21 @@
-# Exercise 1: Lists
+# Exercise 1: Creating data frames
+
+# Create a vector of the number of points the Seahawks have scored in each game this season (google "Seahawks")
 
 
-# Create a vector of everything you ate for breakfast
+# Create a vector of the number of points the Seahwaks have allowed to be scored against them in each game this season
 
 
-# Create a vector of everything you ate for lunch
+# Combine your two vectors into a dataframe
 
 
-# Create a list `meals` that has contains your breakfast and lunch
+# Create a new column "diff" that is the difference in points
 
 
-# Add a `dinner` index to your `meals` list that has what you plan to eat for dinner
+# Create a new column "won" which is TRUE if the Seahawks wom
 
 
-# Extract your 'dinner' element from your list and save it in a vector called 'dinner'
+# Create a vector of the opponents
 
 
-### Bonus ### 
-# Create a list that has the number of items you ate for each meal
-
-
-# Write a function that adds pizza to every meal
-
-
-# Add pizza to every meal!
+# Assign your dataframe rownames of their opponents
