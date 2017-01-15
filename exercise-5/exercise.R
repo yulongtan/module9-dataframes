@@ -1,6 +1,7 @@
 # Exercise 5: Gates Foundation Educational Grants
 
-# Read in the female baby names csv file into a variable called `female.names`
+# Read in the female baby names .csv file into a variable called `female.names`
+# Remember to not load the strings as factors!
 
 
 # Create a vector `years` as the year column of the dataset
@@ -32,4 +33,4 @@
 # a sentence with how popular that name was in that year
 
 
-# How popular was the name 'Laura' in 1995
+# How popular was the name 'Laura' in 1995?

@@ -1,19 +1,18 @@
 # Exercise 4: Working with Data Frames
 
-# Read data into a variable called "grants" using the "read.csv" function
+# Read the data from the `data/gates_money.csv` file into a variable called
+# `grants` using the `read.csv()` function
+# Be sure to set your working directory, and do NOT treat strings as factors!
 
 
-# Use the View function to look at your data
+# Use the View function to look at the loaded data
 
 
-# Create a variable "spending" as the "total.amount" column of the dataset
+# Create a variable `organization` as the `organizationtotal.amount` column of the dataset
 
 
-# Confirm that your "spending" variable is a vector using the "is.vector" function
-
-
-# Create a variable "org" as the "organization" column of the dataset.
-# Unfortunately, it will not be a vector by default, so you must transform it using the as.vector function
+# Confirm that the "organization" column is a vector using the `is.vector()`
+# This is a useful debugging tip if you hit errors later!
 
 
 # What was the mean grant value?

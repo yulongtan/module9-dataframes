@@ -3,7 +3,6 @@
 
 
 # Create a vector of the teams that the Huskies played against during that season
-# Call this vector `not.huskies`. You'll need to convert this column to a vector
 
 
 # Create a vector of the their final scores for the games
@@ -13,15 +12,14 @@
 # Create 2 variables called `rushing.yards` and `passing.yards` to represent the yards the Huskies rushed and passed
 
 
-# Create a variabled called `combined.yards` that is the total yardage of the Huskies for each game
+# Create a variable called `combined.yards` that is the total yardage of the Huskies for each game
 
 
 # What is the score of the game where the Huskies had the most combined yards?
 
 
-# Write a function `MostYardsScore` that takes in a dataframe parameter `games` and returns a descriptive sentence
-# about the game that was played that had the most yards scored in it.
-# Take note of the steps from above including the opposing team, score, and date the game was played
+# Define a function `MostYardsScore` that takes in an argument `games` (a data frame) and
+# returns a descriptive sentence about the game that was played that had the most yards scored in it.
 
 
 # What was the highest yardage game so far this season?
