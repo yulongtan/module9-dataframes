@@ -1,37 +1,36 @@
 # Exercise 4: Gates Foundation Educational Grants
 
-# Read data into a variable called "grants" using the "read.csv" function
+# Read the data from the `data/gates_money.csv` file into a variable called
+# `grants` using the `read.csv()` function
+# Be sure to set your working directory, and do NOT treat strings as factors!
 grants <- read.csv('data/gates_money.csv', stringsAsFactors=FALSE)
 
-# Use the View function to look at your data
+# Use the View function to look at the loaded data
 View(grants)
 
-# Create a variable "spending" as the "total.amount" column of the dataset
-spending <- grants$total_amount
+# Create a variable `organization` as the `organizationtotal.amount` column of the dataset
+organization <- grants$organization
 
-# Confirm that your "spending" variable is a vector using the "is.vector" function
-is.vector(spending)
-
-# Create a variable "org" as the "organization" column of the dataset.
-# Unfortunately, it will not be a vector by default, so you must transform it using the as.vector function
-org <- grants$organization
+# Confirm that the "organization" column is a vector using the `is.vector()`
+# This is a useful debugging tip if you hit errors later!
+is.vector(organization)
 
 ### Now you can ask some more interesting questions about the dataset.  Store your answers in variables ###
 
 # What was the mean grant value?
-mean.spending <- mean(spending)
+mean.spending <- mean(grants$total_amount)
 
 # What was the dollar amount of the largest grant?
-highest.amount <- max(spending)
+highest.amount <- max(grants$total_amount)
 
 # What was the dollar amount of the smallest grant?
-lowest.amount <- min(spending)
+lowest.amount <- min(grants$total_amount)
 
 # Which organization received the largest grant?
-largest.recipient <- org[spending == highest.amount]
+largest.recipient <- organization[grants$total_amount == highest.amount]
 
 # Which organization received the smallest grant?
-smallest.recipient <- org[spending == lowest.amount]
+smallest.recipient <- organization[grants$total_amount == lowest.amount]
 
 # How many grants were awarded in 2010?s
-length(spending[grants$start_year == 2010])
+length(grants$total_amount[grants$start_year == 2010])
