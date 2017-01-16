@@ -7,12 +7,12 @@ In this module, we'll begin working with data frame objects, which are a major d
 **Contents**
 
 - [Resources](#resources)
-- [Lists](#lists)
 - [Data Frames](#data-frames)
   - [Creating Data Frames](#creating-data-frames)
-  - [Describing Dataframes](#describing-dataframes)
+  - [Describing Structure of Data Frames](#describing-structure-of-data-frames)
   - [Accessing Data in Data Frames](#accessing-data-in-data-frames)
-- [Reading CSV Data](#reading-csv-data)
+- [Working with CSV Data](#working-with-csv-data)
+    - [Working Directory](#working-directory)
   - [Factor Variables](#factor-variables)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
