@@ -16,6 +16,12 @@ passing.yards <- husky.games.2015$passing_yards
 # Create a variable called `combined.yards` that is the total yardage of the Huskies for each game
 combined.yards <- passing.yards + rushing.yards
 
+# Add the `combined.yards` vector to the dataframe with the column name being `combined`
+husky.games.2015["combined"] <- combined.yards
+
+# Write the dataframe to a new `.csv` file called `huskies_2015_improved.csv` into the `data directory`
+write.csv(husky.games.2015, "huskies_2015_improved.csv");
+
 # What is the score of the game where the Huskies had the most combined yards?
 score.with.most.yards <- husky.scores[combined.yards == max(combined.yards)]
 
@@ -40,6 +46,7 @@ MostYardsScore <- function(games) {
                 opponent, "on", date, "where they scored", highest.score, "points!"))
 }
 
+# Challenge!
 # What was the highest yardage game so far this season?
 # Hint: Read in the dataset titled `huskies_2016.csv` and save it as a variable
 husky.games.2016 <- read.csv('data/huskies_2016.csv', stringsAsFactors=FALSE)
