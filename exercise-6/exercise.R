@@ -20,11 +20,11 @@
 
 
 
-# Add the `combined.yards` vector to the dataframe
+# Add the `combined.yards` vector to the dataframe with the column name being `combined`
 
 
 
-# Write the dataframe to a new `.csv` file called `huskies_2015_improved.csv`
+# Write the dataframe to a new `.csv` file called `huskies_2015_improved.csv` into the `data directory`
 
 
 
