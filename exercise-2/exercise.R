@@ -30,7 +30,7 @@ View(salaries)
 salaries[salaries$employees == "Employee 57", "salaries.2015"]
 
 # How many employees got a raise?
-nrow(salaries[salaries$got.raise == TRUE, ])
+length(salaries$got.raise[salaries$got.raise])
 
 # What was the value of the highest raise?
 max.salary <- max(salaries$raise)
